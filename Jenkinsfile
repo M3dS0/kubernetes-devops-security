@@ -22,7 +22,7 @@ pipeline {
       stage('Docker Image Build and Push') {
         steps {
           sh 'printenv'
-          sh 'docker built -t m3ds0/numeric-app:""GIT_COMMIT"" .'
+          sh 'docker build -t m3ds0/numeric-app:""GIT_COMMIT"" .'
           sh 'docker push m3ds0/numeric-app:""GIT_COMMIT""'
         }
       }  
