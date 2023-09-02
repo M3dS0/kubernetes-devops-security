@@ -64,6 +64,26 @@
 				 </execution>
 				</executions>
 				</plugin>
+
+				<plugin>
+					<groupId>org.pitest</groupId>
+					<artifactId>pitest-maven</artifactId>
+					<version>1.14.4</version>
+					<dependencies>
+						<dependency>
+							<groupId>org.pitest</groupId>
+							<artifactId>pitest-junit5-plugin</artifactId>
+							<version>0.16</version>
+						</dependency>
+					</dependencies>
+					<configuration>
+						<mutationThreshhold>70</mutationThreshhold>
+						<outputFormats>
+							<outputFormat>XML</outputFormat>
+							<outputFormat>HTML</outputFormat>
+						</outputFormats>		
+					</configuration>
+				</plugin>
 			
 		</plugins>
 	</build>
